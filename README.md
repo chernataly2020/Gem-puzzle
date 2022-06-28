@@ -1,2 +1,2 @@
 # Gem-puzzle
-School project
+School project (RS School)
