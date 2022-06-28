@@ -1,0 +1,180 @@
+@import 'info.css';
+@import 'win.css';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+body {
+    background: url('../assets/HTB1uKt6wXGWBuNjy0Fbq6z4sXXaD.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4%;
+}
+
+.app {
+    border: 1px solip transparent;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    margin: auto;
+}
+
+.board-container {
+    border-radius: 10px;
+    background-color: rgba(21, 148, 120, 0.58);
+    border: 7px solid rgba(4, 128, 56, 0.58);
+    box-shadow: -1px -1px 5px rgba(109, 109, 109, 0.3) inset, 1px 1px 5px rgba(109, 109, 109, 0.3) inset;
+    padding: 3px;
+}
+
+.controls {
+    width: 100%;
+    /*padding: 10px 10px 10px 10px;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.controls button,
+.controls a {
+    margin-top: 2px;
+    */ width: 15rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: rgba(11, 96, 153, 0.7);
+    border: 2px solid transparent;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 3px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(100, 100, 100) radial-gradient(circle at 0 0, rgba(255, 255, 255, .75), rgba(255, 255, 255, .35));
+    box-shadow: inset rgba(0, 0, 0, .75) -1px -1px 2px, inset rgba(255, 255, 255, .9) 1px 1px 2px, rgba(0, 0, 0, .8) 1px 1px 2px -1px;
+    transition: all .2s ease;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    user-select: none;
+}
+
+.controls a {
+    text-align: center;
+}
+
+.controls button:hover,
+.controls a:hover {
+    color: rgba(91, 173, 132, 0.9);
+}
+
+.controls.control {
+    margin: auto;
+}
+
+.board {
+    border-collapse: collapse;
+}
+
+.tile {
+    background-color: #fffef9;
+    width: 22vmin;
+    height: 22vmin;
+    display: flex;
+    border: 5px solid #fffef9;
+    border-radius: 20px;
+    margin: 1px;
+    text-align: center;
+    font-size: 8vmin;
+    color: rgba(11, 96, 153, 0.7);
+    box-shadow: -1px -1px 3px rgba(153, 152, 152, .3) inset, 1px 1px 3px rgba(153, 152, 152, .3) inset;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
+}
+
+.tile.empty {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: bottom;
+}
+
+@media (max-width: 350px),
+(max-height: 350px) {
+    .board-container {
+        border-radius: 10px;
+        border-width: 4px;
+        padding: 3px;
+        margin: auto;
+        border-width: 4px;
+        padding: 1px;
+    }
+    .tile {
+        border-width: 2px;
+        box-shadow: -1px -1px 1px rgba(153, 152, 152, .3) inset, 1px 1px 1px rgba(153, 152, 152, .6) inset;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .controls button,
+    .controls a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .app {
+        flex-direction: row;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .tile {
+        width: 22vw;
+        height: 22vw;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .tile {
+        width: 18vmin;
+        height: 18vmin;
+    }
+}
